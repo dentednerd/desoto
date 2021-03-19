@@ -1,0 +1,106 @@
+@import 'variables';
+@import 'mixins';
+
+svg
+  display: inline;
+  fill: $primary-color;
+  max-height: 1rem;
+  max-width: 1rem;
+
+h2
+  font-family: $cursive-font;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+
+h3
+  font-family: $body-font;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+
+h4
+  font-family: $cursive-font;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+
+h2,
+h3,
+h4
+  background: linear-gradient(to right, $primary-color, $accent-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  filter: drop-shadow(.1rem .1rem 0 $darkaccent-color);
+  padding-bottom: 1rem;
+
+p,
+ul,
+ol
+  margin-bottom: 1.25rem;
+
+ul
+  list-style-type: none;
+
+
+ul,
+ol
+  background-color: $accent-color;
+  border-radius: .5rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: calc(100% - 4rem);
+
+li
+  margin-bottom: .5rem;
+
+  a
+    &::after
+      content: none;
+      padding: 0;
+
+  span
+    a
+      &::after
+        content: none;
+        padding: 0;
+
+a
+  color: $primary-color;
+  padding: 0 .1rem;
+  position: relative;
+  text-decoration: none;
+  transition: color .25s ease-in-out;
+  z-index: 1;
+
+blockquote
+  border: solid .125rem $accent-color;
+  border-left: solid 1rem $accent-color;
+  border-radius: .25rem;
+  box-shadow: $box-shadow;
+  margin: 2rem 1rem;
+  padding: 2rem;
+  position: relative;
+
+  a
+    color: $accent-color;
+
+  strong
+    @include drop-shadow($lighthighlight-color);
+    color: $lighthighlight-color;
+    display: block;
+    left: -2rem;
+    padding: .5rem;
+    position: absolute;
+    top: -1rem;
+
+    &:hover
+      box-shadow: .125rem .125rem 0 $lighthighlight-color, .25rem .25rem 0 $accent-color;
+      pointer-events: none;
+
+    &::after
+      display: none;
+
+  p
+    &:last-child
+      margin-bottom: 0;

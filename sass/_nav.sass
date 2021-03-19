@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+nav
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $darkaccent-color;
+  color: $lighthighlight-color;
+  z-index: 999;
+  padding: 0 2rem;
+
+  ul
+    margin-bottom: 0;
+    background-color: transparent;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    li
+      display: block;
+      margin: 0 1rem;
+
+      a
+        @include text-accent;
+        text-decoration: none;
+        display: inline-block;
+        background: linear-gradient(to right, $highlight-color, $lighthighlight-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;

@@ -1,0 +1,41 @@
+@mixin text-accent
+  font-family: $accent-font;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+
+@mixin hover-fade
+  &::after
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(to right, $lightprimary-color 0%, $lightaccent-color 100%);
+    transition: opacity 0.25s ease-in-out;
+    border-bottom-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+
+  &:hover
+    &::after
+      opacity: 1;
+      transition: opacity 0.25s ease-in-out;
+
+@mixin drop-shadow($thisBackground)
+  @include hover-fade;
+  background-image: linear-gradient(to right, $primary-color 0%, $accent-color 100%);
+  border-bottom-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  box-shadow: 0.125rem 0.125rem 0 $thisBackground, 0.25rem 0.25rem 0 $accent-color;
+  color: $lighthighlight-color;
+  display: block;
+  padding: 0.5rem;
+  position: relative;
+  transition: box-shadow 0.25s;
+
+  &:hover
+    box-shadow: 0.25rem 0.25rem 0 $thisBackground, 0.5rem 0.5rem 0 $lightaccent-color;
+    transition: box-shadow 0.25s;

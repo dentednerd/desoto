@@ -1,0 +1,12 @@
+{
+  "name": "stylestage-freelance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglifycss": "^1.1.0"
+  }
+}
