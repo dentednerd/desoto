@@ -3,12 +3,14 @@
 
 nav
   position: fixed;
-  top: 0;
+  bottom: 0;
   width: 100%;
-  background-color: $darkaccent-color;
-  color: $lighthighlight-color;
+  background-color: $darksecondary-color;
+  color: $lightneutral-color;
   z-index: 999;
-  padding: 0 2rem;
+  padding: .5rem 2rem;
+  box-shadow: 0 0 .25rem $darksecondary-color;
+
 
   ul
     margin-bottom: 0;
@@ -16,21 +18,35 @@ nav
     width: auto;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media(min-width: 480px)
+      grid-template-columns: repeat(3, 1fr);
+
+    @media(min-width: 1024px)
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
 
     li
       display: block;
       margin: 0 1rem;
+      text-align: center;
 
       a
-        @include text-accent;
+        @include skew-text
         text-decoration: none;
         display: inline-block;
-        background: linear-gradient(to right, $highlight-color, $lighthighlight-color);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        color: transparent;
+        font-family: 'Comic Neue', cursive;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        color: $lightneutral-color;
+        text-shadow: 1px 1px $darkneutral-color;
+
+        &:hover
+          color: $lightprimary-color;
+
+        @media(min-width: 768px)
+          font-size: 1.5rem;

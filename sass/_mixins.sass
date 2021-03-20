@@ -1,41 +1,76 @@
-@mixin text-accent
-  font-family: $accent-font;
-  text-transform: uppercase;
-  letter-spacing: 0.125rem;
+@mixin comic-border
+    border: solid .25rem $black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 
-@mixin hover-fade
-  &::after
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    bottom: 0;
-    z-index: -1;
-    background: linear-gradient(to right, $lightprimary-color 0%, $lightaccent-color 100%);
-    transition: opacity 0.25s ease-in-out;
-    border-bottom-right-radius: .5rem;
-    border-top-left-radius: .5rem;
+@mixin thin-comic-border
+  border: solid .125rem $black;
+  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
 
-  &:hover
-    &::after
-      opacity: 1;
-      transition: opacity 0.25s ease-in-out;
-
-@mixin drop-shadow($thisBackground)
-  @include hover-fade;
-  background-image: linear-gradient(to right, $primary-color 0%, $accent-color 100%);
-  border-bottom-right-radius: .5rem;
-  border-top-left-radius: .5rem;
-  box-shadow: 0.125rem 0.125rem 0 $thisBackground, 0.25rem 0.25rem 0 $accent-color;
-  color: $lighthighlight-color;
-  display: block;
-  padding: 0.5rem;
+@mixin button
+  @include thin-comic-border;
   position: relative;
-  transition: box-shadow 0.25s;
+  display: block;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.8" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23d68810"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'), linear-gradient(to right, $lightprimary-color 0%, $primary-color 100%);
+  background-size: 13px, 100%;
+  color: $black;
+  padding: .5rem;
+  width: auto;
+  box-shadow: 0.25rem 0.25rem 0 $darkprimary-color;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all .25s;
 
   &:hover
-    box-shadow: 0.25rem 0.25rem 0 $thisBackground, 0.5rem 0.5rem 0 $lightaccent-color;
-    transition: box-shadow 0.25s;
+    box-shadow: 0.5rem 0.5rem 0 $primary-color;
+    background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.8" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23ffc265"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'), linear-gradient(to right, $lightneutral-color 0%, $lightprimary-color 100%);
+    background-size: 13px, 100%;
+    transform: scale(1.1);
+    transition: all 0.25s;
+
+
+@mixin comic-card
+  @include thin-comic-border;
+  background-color: $lightbackground-color;
+  background-image: radial-gradient(circle, rgba(253, 241, 214, .5) 0, transparent 100%);
+  box-shadow: 0 0 .25rem $darkbackground-color, 0 0 .5rem $lightbackground-color, 0 0 1rem $neutral-color;
+
+@mixin blammo
+  display: inline-block;
+  color: $lightprimary-color;
+  font-family: $headline-font;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-shadow: 0 0 1px $black, 0 0 2px $black, 1px 1px $darkprimary-color, 2px 2px $darkprimary-color, 3px 3px $darkprimary-color, 4px 4px $darkprimary-color;
+  padding: .5rem;
+
+@mixin skew-text
+  font-weight: 700;
+  font-style: italic;
+  transform: skewX(-10deg);
+
+@mixin blue-block
+  @include comic-border;
+  @include skew-text;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  margin: 0;
+  font-family: $cursive-font;
+  text-transform: uppercase;
+  color: $lightneutral-color;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.8" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%2335598d"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'), linear-gradient(to right, $lightsecondary-color, $secondary-color);
+  background-size: 13px, 100%;
+  box-shadow: .25rem .25rem 0 $darksecondary-color;
+  text-shadow: 0 0 1px $darksecondary-color, 0 0 2px $darksecondary-color, 0 0 .25rem $darksecondary-color, .125rem .125rem $darksecondary-color;
+  transition: all .2s ease-in-out;
+
+  &:hover
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.8" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%237D99C2"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'), linear-gradient(to right, $lightneutral-color, $lightsecondary-color);
+    // color: $secondary-color;
+    transform: skewX(-10deg) scale(1.1);
+    box-shadow: .5rem .5rem 0 $darksecondary-color;
+
+    transition: all .2s ease-in-out;

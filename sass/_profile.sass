@@ -2,52 +2,65 @@
 @import 'mixins';
 
 aside.profile
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   text-align: center;
   width: calc(100% - 2rem);
-  max-width: calc(800px - 2rem);
+  max-width: 800px;
+  height: 50vh;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 
   .container
+    width: 100%;
+
+    h4
+      @include blammo;
+      transform: rotate(0);
+      margin-bottom: 1rem;
+
     a
-      @include drop-shadow($lighthighlight-color);
+      @include button;
       margin: 0 auto;
+      min-width: 16rem;
       width: 50%;
 
-      @media (min-width: 768px)
-        width: 25%;
-
     ul
+      @include comic-border;
+      background-color: $lightneutral-color;
       display: flex;
       flex-flow: column nowrap;
       width: 100%;
-      margin-bottom: 1.25rem;
-      background-color: transparent;
       margin: 0 auto 1.25rem;
-      padding: 0;
-      @include text-accent;
+      padding: 1rem;
 
       @media(min-width: 768px)
         width: 50%;
 
       li
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: repeat(4, auto);
-        column-gap: 1rem;
+        column-gap: .5rem;
         text-align: left;
         word-break: break-word;
 
+        span:first-of-type
+          text-align: right;
+
         a
           background: none;
+          border: none;
           display: inline;
-          color: $primary-color;
+          color: $secondary-color;
+          font-family: $body-font;
           box-shadow: none;
           padding: 0;
           text-align: left;
 
           &:hover
             box-shadow: none;
-            color: $primary-color;
+            color: $secondary-color;
             background: none;
 
           &:after

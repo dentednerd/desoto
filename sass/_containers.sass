@@ -1,37 +1,14 @@
 @import 'variables';
-
-/* CONTAINERS */
+@import 'mixins';
 
 article:nth-child(n + 2),
-aside.profile .container,
 article#about section.container
+  @include comic-border;
   position: relative;
-  background-color: $lighthighlight-color;
-  border-radius: 0.5em;
-  margin: 3rem auto;
-  border: solid 2px $darkaccent-color;
-  border-top-width: 2rem;
-  padding: 1rem;
-  box-shadow: 0 0 .5rem $accent-color;
+  background-color: $lightneutral-color;
+  margin: 0 auto 25vh;
+  padding: 0 2rem 2rem;
+  box-shadow: 0 0 .5rem $darkbackground-color;
 
   @media(min-width: 800px)
     max-width: 800px;
-
-
-  &::before
-    content: '';
-    position: absolute;
-    top: -2.4rem;
-    left: -0.25rem;
-    height: 0.8em;
-    width: 0.8em;
-    margin: 1em;
-    border-radius: 100%;
-    background: #ccc;
-    box-shadow: 1.4em 0em #ccc, 2.8em 0em #ccc;
-    transition: 0.3s all ease-in-out;
-
-
-  &:hover::before
-    background: #c5571c;
-    box-shadow: 1.4em 0em #e3d83f, 2.8em 0em #b5d83c;

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Grand+Hotel&family=Roboto+Slab:wght@400;700&display=swap');
+// This style is named DeSoto. It's inspired by Sam & Max.
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Bangers&family=Comic+Neue:ital,wght@0,400;1,700&display=swap');
 @import 'resets';
 @import 'variables';
 @import 'mixins';
@@ -7,17 +9,28 @@
 @import 'nav';
 @import 'containers';
 @import 'about';
+@import 'guidelines';
 @import 'profile';
 @import 'features';
 @import 'contribute';
 @import 'sourcefiles';
 @import 'footer';
 
+html
+  overflow: hidden;
+  height: 100%;
+
 body
+  background-image: radial-gradient(circle, rgba(253, 241, 214, .5) 0, transparent 100%), repeating-radial-gradient(circle,$background-color 0, $background-color 10%,$darkbackground-color 10%, $darkbackground-color 20%);
   background-color: $background-color;
+  background-position: center;
+  background-attachment: fixed;
   font-family: $body-font;
   font-size: 16px;
   line-height: 24px;
+  color: $black;
+  overflow: auto;
+  height: 100%;
 
 main, header
   width: calc(100vw - 2rem);
@@ -25,17 +38,30 @@ main, header
 
   @media (min-width: 800px)
     max-width: 800px;
-    margin: 0 auto;
+    padding: 0;
 
-a.link-guidelines
-  @include drop-shadow($lighthighlight-color);
-  max-width: 50%;
-  margin: 0 auto;
-  text-align: center;
+a.skip-link
+  @include button;
+  position: absolute;
+  top: .5rem;
+  left: -9rem;
+  font-size: .75rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 
-  @media (min-width: 768px)
-    width: calc(100% - 2rem);
+  &::after
+    content: '→';
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    width: 3rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 
-
-a.link-allstyles
-  width: 10rem;
+  &:hover
+    left: 1rem;

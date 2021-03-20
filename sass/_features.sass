@@ -2,47 +2,48 @@
 @import 'mixins';
 
 aside#styles
-  max-width: 100%;
-  margin-bottom: 0;
-  background-color: $darkprimary-color;
+  display: block;
+  width: calc(100% - 2rem);
+  max-width: 800px;
+  margin: 0 auto 25vh;
   padding: 2rem 0;
   text-align: center;
 
   h2
-    color: $highlight-color;
+    @include blammo;
+    transform: rotate(0);
+    text-align: center;
 
   .container ul.features
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 100%;
+    flex-flow: column nowrap;
     background-color: transparent;
     padding: 0;
 
+    @media(min-width: 480px)
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
     li
-      flex: 1 1 10rem;
-      flex: 0 1 10rem;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
-      width: 8rem;
-      height: 8rem;
       padding: 1rem;
       margin: 1rem auto;
-      color: $lighthighlight-color;
-      @include drop-shadow($darkprimary-color);
+      color: $lightneutral-color;
 
-      span a
-        color: $lighthighlight-color;
-        padding: 0;
-        margin: 0;
+      span
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        color: $black;
+
+        a
+          @include blue-block;
+          width: 10rem;
+          height: 10rem;
+          margin-bottom: 2rem;
 
   a.link-allstyles
-    @include drop-shadow($darkprimary-color);
-    color: $lighthighlight-color;
-    width: 50%;
+    @include button;
     margin: 0 auto;
-
-    @media (min-width: 480px)
-      width: 25%;
+    min-width: 16rem;
+    width: 50%;

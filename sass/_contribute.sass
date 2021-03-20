@@ -1,48 +1,57 @@
 @import 'variables';
 @import 'mixins';
 
-article#contribute section.container
-  ol
-    counter-reset: gradient-counter;
-    list-style: none;
-    margin: -1rem auto 0;
-    padding: 0;
-    background-color: transparent;
-    width: calc(100% - 2rem);
+article#contribute
+  margin-bottom: 3rem;
 
-    li
-      counter-increment: gradient-counter;
-      margin: 2rem 0;
-      padding: 1rem 1.5rem;
-      position: relative;
-      border: solid 0.125rem $accent-color;
-      border-left: solid 1rem $accent-color;
-      box-shadow: $box-shadow;
-      border-radius: 0.25rem;
+  @media(min-width: 480px)
+    margin-bottom: 25vh;
 
-      a
-        color: $accent-color;
+  section.container
+    &:nth-of-type(2)
+        position: relative;
+        margin-top: 2rem;
 
-      &::before, &::after
-        @include drop-shadow($lighthighlight-color);
-        content: '';
-        width: 1.5rem;
-        height: 1.5rem;
-        overflow: hidden;
-        position: absolute;
-        top: -1rem;
-        left: -2rem;
+        h3
+          @include blammo;
+          font-size: 2.5rem;
 
-        &:hover
-          pointer-events: none;
-          box-shadow: 0.125rem 0.125rem 0 $lighthighlight-color, 0.25rem 0.25rem 0 $accent-color;
+    ol
+      counter-reset: gradient-counter;
+      list-style: none;
+      margin: 2rem auto 0;
+      padding: 0;
+      background-color: transparent;
+      width: 100%;
 
-      &::before
-        align-items: flex-end;
-        content: counter(gradient-counter);
-        color: white;
-        font-family: 'Roboto Slab', serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
+      li
+        @include comic-card;
+        counter-increment: gradient-counter;
+        margin: 2rem 0;
+        padding: 1rem 1.5rem;
+        position: relative;
+
+        a
+          color: $secondary-color;
+
+        &::before, &::after
+          content: '';
+          width: 3rem;
+          height: 4rem;
+          overflow: hidden;
+          position: absolute;
+          top: -2rem;
+          left: -1.5rem;
+          @include blammo;
+
+          &:hover
+            pointer-events: none;
+            box-shadow: 0.125rem 0.125rem 0 $lightneutral-color, 0.25rem 0.25rem 0 $secondary-color;
+
+        &::before
+          align-items: flex-end;
+          content: counter(gradient-counter);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
