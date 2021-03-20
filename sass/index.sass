@@ -42,14 +42,13 @@ main, header
 
 a.skip-link
   @include button;
-  position: absolute;
-  top: .5rem;
-  left: -9rem;
+  width: 14rem;
   font-size: .75rem;
   text-transform: uppercase;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  transform: translateX(-10rem);
 
   &::after
     content: '→';
@@ -64,4 +63,4 @@ a.skip-link
     margin: 0;
 
   &:hover
-    left: 1rem;
+    transform: translateX(0);
