@@ -6,18 +6,19 @@ header
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 8.125rem);
   overflow: hidden;
 
-  @media(min-width: 800px)
+  @media(min-width: 768px)
     max-width: 800px;
+    height: 100vh;
     flex-flow: row nowrap;
 
   div.container
     width: 100%;
     margin: 5rem auto 3rem;
 
-    @media (min-width: 480px)
+    @media (min-width: 768px)
       margin: 3rem auto 3rem;
       display: grid;
       grid-template-columns: 1fr 2fr 2fr 1fr;
@@ -36,11 +37,13 @@ header
       grid-column: 1 / span 4;
       transform: rotate(-6deg);
 
-      @media (min-width: 800px)
+      @media (min-width: 768px)
         font-size: 9rem;
         line-height: 9rem;
 
     h2
+      width: 100%;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -57,8 +60,9 @@ header
       transform: none;
       border: none;
       text-shadow: .125rem .125rem $darkprimary-color, 0 0 1px $black, 0 0 2px $black, 0 0 .25rem $darkbackground-color;
+      transform: rotate(-6deg);
 
-      @media(min-width: 480px)
+      @media(min-width: 768px)
         text-align: right;
 
       &::before
@@ -66,19 +70,24 @@ header
 
     p
       @include comic-card;
+      background-color: $lightsecondary-color;
       padding: 1rem;
       grid-area: 2 / 3 / 3 / 4;
       text-align: center;
       font-family: $body-font;
       letter-spacing: -.5px;
-      box-shadow: 0 0 .25rem $darkbackground-color;
+      box-shadow: 0 0 .25rem $darksecondary-color;
       font-size: 1rem;
+      transform: rotate(-6deg);
+
+      @media(min-width: 768px)
+        transform: translateY(-1.5rem) rotate(-6deg);
 
       a
-        @include skew-text;
         color: $lightprimary-color;
         font-family: $cursive-font;
         font-size: 1.25rem;
+        font-weight: 700;
         text-shadow: .125rem .125rem $darkprimary-color, 0 0 1px $black, 0 0 2px $black, 0 0 .25rem $darkbackground-color;
         text-transform: uppercase;
         transition: text-shadow 0.2s ease-in-out;
@@ -94,8 +103,19 @@ header
       @include button;
       grid-column: 1 / span 4;
       margin: 0 auto;
+      display: block;
       text-align: center;
-      width: 100%;
+      width: 75%;
+      transform: rotate(-6deg);
+
+      &:hover
+        transform: scale(1.1) rotate(-6deg);
+
+        @media(prefers-reduced-motion)
+          transform: rotate(-6deg);
+
+      @media(min-width: 768px)
+        width: 40%;
 
       svg
         max-height: 1rem;
@@ -103,8 +123,3 @@ header
         display: inline;
         fill: $black;
 
-      @media(min-width: 480px)
-        width: 50%;
-
-      @media(min-width: 768px)
-        width: 25%;

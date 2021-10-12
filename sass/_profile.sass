@@ -2,40 +2,66 @@
 @import 'mixins';
 
 aside.profile
-  margin: 0 auto 3rem;
+  background-color: $lightsecondary-color;
+  margin: 0 auto;
   text-align: center;
-  width: calc(100% - 2rem);
-  max-width: 800px;
-  height: 50vh;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 0 1rem $darkbackground-color;
+
+  @media(min-width: 768px)
+    padding: 2rem;
 
   .container
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media(min-width: 768px)
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1rem;
 
     h4
       @include blammo;
-      transform: rotate(0);
-      margin-bottom: 1rem;
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
 
-    a
-      @include button;
-      margin: 0 auto;
-      min-width: 16rem;
-      width: 50%;
+      @media(min-width: 768px)
+        margin-bottom: 0;
+        justify-self: center;
+        align-self: end;
+        transform: rotate(-6deg);
+
+    a:nth-child(3)
+        @include button;
+
+        @media(min-width: 768px)
+          justify-self: center;
+          align-self: start;
+          transform: rotate(-6deg);
+
+          &:hover
+            transform: scale(1.1) rotate(-6deg);
 
     ul
-      @include comic-border;
+      @include thin-comic-border;
       background-color: $lightneutral-color;
       display: flex;
       flex-flow: column nowrap;
-      width: 100%;
+      justify-content: center;
       margin: 0 auto 1.25rem;
       padding: 1rem;
 
       @media(min-width: 768px)
-        width: 50%;
+        grid-area: 1 / 2 / 3 / 3;
+        margin: 0;
+        justify-self: center;
+        align-self: center;
 
       li
         display: grid;
@@ -47,21 +73,3 @@ aside.profile
 
         span:first-of-type
           text-align: right;
-
-        a
-          background: none;
-          border: none;
-          display: inline;
-          color: $secondary-color;
-          font-family: $body-font;
-          box-shadow: none;
-          padding: 0;
-          text-align: left;
-
-          &:hover
-            box-shadow: none;
-            color: $secondary-color;
-            background: none;
-
-          &:after
-            background: none;

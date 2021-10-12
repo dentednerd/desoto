@@ -8,43 +8,33 @@ svg
   max-width: 1rem;
 
 h2
+  @include blammo;
+  transform: translateY(-2rem) translateX(-3.5rem);
+  text-align: left;
+  margin-bottom: -1rem;
+  width: calc(100% + 7rem);
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  font-family: $body-font;
   font-size: 2.5rem;
   line-height: 2.5rem;
   padding-right: 1rem;
 
-h3
-  font-family: $body-font;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-
-h2
-  @include blammo;
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-
   @media(min-width: 480px)
-    transform: translateX(-4rem);
+    transform: translateY(-2rem) translateX(-4rem);
     font-size: 3.5rem;
     line-height: 3.5rem;
-    text-align: left;
 
 h3
   @include blammo;
-  text-align: center;
-  margin: 0 auto 1rem;
+  transform: translateX(-1rem);
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: left;
+  margin: 1rem auto;
   width: 100%;
   font-size: 2.5rem;
-
-  @media(min-width: 480px)
-    transform: translateX(-4rem);
-    text-align: left;
-    margin-bottom: 0;
 
 p,
 ul,

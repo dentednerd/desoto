@@ -1,11 +1,40 @@
+@import 'mixins';
+
 article#guidelines
   section.container
+    position: relative;
+
+    h2
+      position: absolute;
+      top: -2rem;
+      left: -0.125rem;
+
+      @media(min-width: 768px)
+        top: -3rem;
+
+    h3
+      font-size: 2rem;
+      line-height: 2rem;
+
+      &::after
+        content: ' . . .'
+
     p:first-of-type
+      @include comic-card;
+      background-color: $lightsecondary-color;
+      box-shadow: 0 0 .25rem $darksecondary-color;
+      padding: 1rem;
+      margin-top: 2rem;
       margin-bottom: 0;
+      text-align: center;
+
+      @media(min-width:768px)
+        margin-top: 3rem;
 
     a.link-guidelines
       @include button;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
       margin: 0 auto;
-      min-width: 14rem;
-      width: 50%;
       text-align: center;

@@ -1,8 +1,11 @@
 {
-  "name": "stylestage-freelance",
+  "name": "stylestage-desoto",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",

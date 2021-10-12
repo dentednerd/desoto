@@ -1,6 +1,4 @@
-// This style is named DeSoto. It's inspired by Sam & Max.
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Bangers&family=Comic+Neue:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap');
 @import 'resets';
 @import 'variables';
 @import 'mixins';
@@ -21,46 +19,33 @@ html
   height: 100%;
 
 body
-  background-image: radial-gradient(circle, rgba(253, 241, 214, .5) 0, transparent 100%), repeating-radial-gradient(circle,$background-color 0, $background-color 10%,$darkbackground-color 10%, $darkbackground-color 20%);
   background-color: $background-color;
+  background-image: radial-gradient(circle, rgba(253, 241, 214, .5) 0, transparent 100%), repeating-radial-gradient(circle,$background-color 0, $background-color 10%,$darkbackground-color 10%, $darkbackground-color 20%);
   background-position: center;
   background-attachment: fixed;
   font-family: $body-font;
   font-size: 16px;
   line-height: 24px;
   color: $black;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 100%;
 
 main, header
   width: calc(100vw - 2rem);
   margin: 0 auto;
 
-  @media (min-width: 800px)
+  @media (min-width: 768px)
+    width: calc(100vw - 4rem);
     max-width: 800px;
     padding: 0;
 
 a.skip-link
   @include button;
-  width: 14rem;
-  font-size: .75rem;
-  text-transform: uppercase;
+  height: 2rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  transform: translateX(-10rem);
-
-  &::after
-    content: '→';
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 1rem;
-    width: 3rem;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-
-  &:hover
-    transform: translateX(0);
+  margin: 1rem 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;

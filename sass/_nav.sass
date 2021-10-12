@@ -8,8 +8,10 @@ nav
   background-color: $darksecondary-color;
   color: $lightneutral-color;
   z-index: 999;
-  padding: .5rem 2rem;
-  box-shadow: 0 0 .25rem $darksecondary-color;
+  padding: .5rem;
+
+  @media(min-width: 768px)
+    padding: .5rem 1rem;
 
 
   ul
@@ -19,10 +21,8 @@ nav
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    @media(min-width: 480px)
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 
     @media(min-width: 1024px)
       display: flex;
