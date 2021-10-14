@@ -12,7 +12,16 @@ to be installed globally:
 ## development
 
 ```sh
-$ gulp
+$ git clone https://github.com/dentednerd/desoto.git
+$ cd desoto
+
+// using npm:
+$ npm i
+$ npm run start
+
+// using yarn:
+$ yarn
+$ yarn start
 ```
 
 ## credits
