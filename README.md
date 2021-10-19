@@ -28,3 +28,4 @@ $ yarn start
 
 - hand drawn border effect by [Tiffany Rayside](https://codepen.io/tmrDevelops/pen/NPXodB)
 - 3D text effect by [Mark Otto](https://markdotto.com/playground/3d-text/)
+- dotted background by [Gabriele Corti](https://codepen.io/borntofrappe/pen/GeXMgm)
