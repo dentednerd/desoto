@@ -97,12 +97,11 @@ header {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 8.125rem);
+  height: calc(100vh - 7rem);
   overflow: hidden; }
   @media (min-width: 768px) {
     header {
       max-width: 800px;
-      height: 100vh;
       flex-flow: row nowrap; } }
   header div.container {
     width: 100%;
@@ -231,13 +230,15 @@ header {
         fill: #333; }
 
 nav {
-  position: fixed;
+  position: sticky;
   bottom: 0;
+  margin: 0 auto 3rem;
   width: 100%;
   background-color: #0F3060;
   color: #fdf1d6;
-  z-index: 999;
-  padding: .5rem; }
+  z-index: 2;
+  padding: .5rem;
+  box-shadow: 0 0 0.5rem #0F3060; }
   @media (min-width: 768px) {
     nav {
       padding: .5rem 1rem; } }
@@ -245,17 +246,12 @@ nav {
     margin-bottom: 0;
     background-color: transparent;
     width: auto;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr); }
-    @media (min-width: 1024px) {
-      nav ul {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center; } }
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 800px; }
     nav ul li {
       display: block;
       margin: 0 1rem;
@@ -850,9 +846,6 @@ footer.page-footer {
   padding: 2rem 1rem 7rem;
   text-align: center;
   box-shadow: 0 0 0.5rem #0F3060; }
-  @media (min-width: 768px) {
-    footer.page-footer {
-      padding-bottom: 3rem; } }
   footer.page-footer a {
     color: #fdf1d6; }
   footer.page-footer p {
