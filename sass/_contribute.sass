@@ -1,54 +1,54 @@
-@import 'variables';
-@import 'mixins';
+@import 'variables'
+@import 'mixins'
 
 article#contribute
   section.container
     &:nth-of-type(2)
-        position: relative;
-        margin-top: 2rem;
+        position: relative
+        margin-top: 2rem
 
         h3
-          @include blammo;
-          font-size: 2rem;
-          line-height: 2rem;
-          margin: 0;
+          @include blammo
+          font-size: 2rem
+          line-height: 2rem
+          margin: 0
 
     ol
-      counter-reset: gradient-counter;
-      list-style: none;
-      margin: 2rem auto 0;
-      padding: 0;
-      background-color: transparent;
-      width: 100%;
+      counter-reset: gradient-counter
+      list-style: none
+      margin: 2rem auto 0
+      padding: 0
+      background-color: transparent
+      width: 100%
 
       li
-        @include comic-card;
-        counter-increment: gradient-counter;
-        margin: 2rem 0;
-        padding: 1rem 1.5rem;
-        position: relative;
+        @include comic-card
+        counter-increment: gradient-counter
+        margin: 2rem 0
+        padding: 1rem 1.5rem
+        position: relative
 
         a
-          color: $secondary-color;
+          color: $secondary-color
 
         &::before, &::after
-          content: '';
-          width: 3rem;
-          height: 4rem;
-          overflow: hidden;
-          position: absolute;
-          top: -2rem;
-          left: -1.5rem;
-          @include blammo;
+          content: ''
+          width: 3rem
+          height: 4rem
+          overflow: hidden
+          position: absolute
+          top: -2rem
+          left: -1.5rem
+          @include blammo
 
           &:hover
-            pointer-events: none;
-            box-shadow: 0.125rem 0.125rem 0 $lightneutral-color, 0.25rem 0.25rem 0 $secondary-color;
+            pointer-events: none
+            box-shadow: 0.125rem 0.125rem 0 $lightneutral-color, 0.25rem 0.25rem 0 $secondary-color
 
         &::before
-          align-items: flex-end;
-          content: counter(gradient-counter);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 1;
+          align-items: flex-end
+          content: counter(gradient-counter)
+          display: flex
+          justify-content: center
+          align-items: center
+          z-index: 1

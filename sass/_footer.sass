@@ -1,44 +1,44 @@
-@import 'variables';
-@import 'mixins';
+@import 'variables'
+@import 'mixins'
 
 footer.page-footer
-  background-color: $darksecondary-color;
-  color: $lightneutral-color;
-  padding: 2rem 1rem 7rem;
-  text-align: center;
-  box-shadow: 0 0 .5rem $darksecondary-color;
+  background-color: $darksecondary-color
+  color: $lightneutral-color
+  padding: 2rem 1rem 7rem
+  text-align: center
+  box-shadow: 0 0 .5rem $darksecondary-color
 
   a
-    color: $lightneutral-color;
+    color: $lightneutral-color
 
   p
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    max-width: 600px
+    margin: 0 auto 2rem
 
     a
-      border-bottom: dashed 1px $lightneutral-color;
+      border-bottom: dashed 1px $lightneutral-color
 
   .container ul
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: transparent;
-    margin: 2rem auto;
-    padding: 0;
-    max-width: 100%;
+    display: flex
+    flex-flow: column nowrap
+    background-color: transparent
+    margin: 2rem auto
+    padding: 0
+    max-width: 100%
 
     @media (min-width: 480px)
-      max-width: 600px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, calc(50% - 1rem)));
-      gap: 1rem;
+      max-width: 600px
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(200px, calc(50% - 1rem)))
+      gap: 1rem
 
     li a
-      @include button;
-      height: auto;
-      font-size: 1rem;
-      width: 16rem;
-      margin: 0 auto;
+      @include button
+      height: auto
+      font-size: 1rem
+      width: 16rem
+      margin: 0 auto
 
       svg
-        fill: $black;
-        margin-right: .25rem;
+        fill: $black
+        margin-right: .25rem

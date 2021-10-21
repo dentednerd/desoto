@@ -1,52 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap');
-@import 'resets';
-@import 'variables';
-@import 'mixins';
-@import 'text';
-@import 'header';
-@import 'nav';
-@import 'containers';
-@import 'about';
-@import 'guidelines';
-@import 'profile';
-@import 'features';
-@import 'contribute';
-@import 'sourcefiles';
-@import 'footer';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400700&family=Bangers&family=Comic+Neue:ital,wght@0,4000,7001,400&display=swap')
+@import 'resets'
+@import 'variables'
+@import 'mixins'
+@import 'text'
+@import 'header'
+@import 'nav'
+@import 'containers'
+@import 'about'
+@import 'guidelines'
+@import 'profile'
+@import 'features'
+@import 'contribute'
+@import 'sourcefiles'
+@import 'footer'
 
 html
-  overflow: hidden;
-  height: 100%;
+  overflow: hidden
+  height: 100%
 
 body
-  position: relative;
-  background-color: $background-color;
-  background-image: radial-gradient(circle, rgba(253, 241, 214, .5) 0, transparent 100%), repeating-radial-gradient(circle,$background-color 0, $background-color 10%,$darkbackground-color 10%, $darkbackground-color 20%);
-  background-position: center;
-  background-attachment: fixed;
-  font-family: $body-font;
-  font-size: 16px;
-  line-height: 24px;
-  color: $black;
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100%;
+  position: relative
+  background-color: $background-color
+  background-image: radial-gradient(circle, rgba(253, 241, 214, .5) 0, transparent 100%), repeating-radial-gradient(circle,$background-color 0, $background-color 10%,$darkbackground-color 10%, $darkbackground-color 20%)
+  background-position: center
+  background-attachment: fixed
+  font-family: $body-font
+  font-size: 16px
+  line-height: 24px
+  color: $black
+  overflow-y: auto
+  overflow-x: hidden
+  height: 100%
 
 main, header
-  width: calc(100vw - 2rem);
-  margin: 0 auto;
+  width: calc(100vw - 2rem)
+  margin: 0 auto
 
   @media (min-width: 768px)
-    width: calc(100vw - 4rem);
-    max-width: 800px;
-    padding: 0;
+    width: calc(100vw - 4rem)
+    max-width: 800px
+    padding: 0
 
 a.skip-link
-  @include button;
-  height: 2rem;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  margin: 1rem 1rem 0;
-  font-size: 1rem;
-  font-weight: 700;
+  @include button
+  height: 2rem
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  margin: 1rem 1rem 0
+  font-size: 1rem
+  font-weight: 700

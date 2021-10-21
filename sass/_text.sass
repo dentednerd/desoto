@@ -1,83 +1,83 @@
-@import 'variables';
-@import 'mixins';
+@import 'variables'
+@import 'mixins'
 
 svg
-  display: inline;
-  fill: $secondary-color;
-  max-height: 1rem;
-  max-width: 1rem;
+  display: inline
+  fill: $secondary-color
+  max-height: 1rem
+  max-width: 1rem
 
 h2
-  @include blammo;
-  transform: translateY(-2rem) translateX(-3.5rem);
-  text-align: left;
-  margin-bottom: -1rem;
-  width: calc(100% + 7rem);
-  position: relative;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  padding-right: 1rem;
+  @include blammo
+  transform: translateY(-2rem) translateX(-3.5rem)
+  text-align: left
+  margin-bottom: -1rem
+  width: calc(100% + 7rem)
+  position: relative
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  font-size: 2.5rem
+  line-height: 2.5rem
+  padding-right: 1rem
 
   @media(min-width: 480px)
-    transform: translateY(-2rem) translateX(-4rem);
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+    transform: translateY(-2rem) translateX(-4rem)
+    font-size: 3.5rem
+    line-height: 3.5rem
 
 h3
-  @include blammo;
-  transform: translateX(-1rem);
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  text-align: left;
-  margin: 1rem auto;
-  width: 100%;
-  font-size: 2.5rem;
+  @include blammo
+  transform: translateX(-1rem)
+  font-size: 1.5rem
+  line-height: 1.75rem
+  text-align: left
+  margin: 1rem auto
+  width: 100%
+  font-size: 2.5rem
 
 p,
 ul,
 ol
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem
 
 ul
-  list-style-type: none;
+  list-style-type: none
 
 ul,
 ol
-  background-color: $secondary-color;
-  border-radius: .5rem;
-  margin: 1rem auto;
-  padding: 1rem;
-  width: calc(100% - 4rem);
+  background-color: $secondary-color
+  border-radius: .5rem
+  margin: 1rem auto
+  padding: 1rem
+  width: calc(100% - 4rem)
 
 li
-  margin-bottom: .5rem;
+  margin-bottom: .5rem
 
   a
     &::after
-      content: none;
-      padding: 0;
+      content: none
+      padding: 0
 
   span
     a
       &::after
-        content: none;
-        padding: 0;
+        content: none
+        padding: 0
 
 a
-  color: $secondary-color;
-  padding: 0 .1rem;
-  position: relative;
-  text-decoration: none;
-  transition: color .25s ease-in-out;
-  z-index: 1;
+  color: $secondary-color
+  padding: 0 .1rem
+  position: relative
+  text-decoration: none
+  transition: color .25s ease-in-out
+  z-index: 1
 
 blockquote
   a
-    color: $secondary-color;
+    color: $secondary-color
 
   p
     &:last-child
-      margin-bottom: 0;
+      margin-bottom: 0

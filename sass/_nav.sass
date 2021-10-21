@@ -1,49 +1,49 @@
-@import 'variables';
-@import 'mixins';
+@import 'variables'
+@import 'mixins'
 
 nav
-  position: sticky;
-  bottom: 0;
-  margin: 0 auto 3rem;
-  width: 100%;
-  background-color: $darksecondary-color;
-  color: $lightneutral-color;
-  z-index: 2;
-  padding: .5rem;
-  box-shadow: 0 0 0.5rem $darksecondary-color;
+  position: sticky
+  bottom: 0
+  margin: 0 auto 3rem
+  width: 100%
+  background-color: $darksecondary-color
+  color: $lightneutral-color
+  z-index: 2
+  padding: .5rem
+  box-shadow: 0 0 0.5rem $darksecondary-color
 
   @media(min-width: 768px)
-    padding: .5rem 1rem;
+    padding: .5rem 1rem
 
 
   ul
-    margin-bottom: 0;
-    background-color: transparent;
-    width: auto;
-    margin: 0 auto;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    max-width: 800px;
+    margin-bottom: 0
+    background-color: transparent
+    width: auto
+    margin: 0 auto
+    padding: 0
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    max-width: 800px
 
     li
-      display: block;
-      margin: 0 1rem;
-      text-align: center;
+      display: block
+      margin: 0 1rem
+      text-align: center
 
       a
         @include skew-text
-        text-decoration: none;
-        display: inline-block;
-        font-family: 'Comic Neue', cursive;
-        letter-spacing: -1px;
-        text-transform: uppercase;
-        color: $lightneutral-color;
-        text-shadow: 1px 1px $darkneutral-color;
+        text-decoration: none
+        display: inline-block
+        font-family: 'Comic Neue', cursive
+        letter-spacing: -1px
+        text-transform: uppercase
+        color: $lightneutral-color
+        text-shadow: 1px 1px $darkneutral-color
 
         &:hover
-          color: $lightprimary-color;
+          color: $lightprimary-color
 
         @media(min-width: 768px)
-          font-size: 1.5rem;
+          font-size: 1.5rem

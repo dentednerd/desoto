@@ -1,121 +1,121 @@
-@import 'mixins';
-@import 'variables';
+@import 'mixins'
+@import 'variables'
 
 header
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 7rem);
-  overflow: hidden;
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  height: calc(100vh - 7rem)
+  overflow: hidden
 
   @media(min-width: 768px)
-    max-width: 800px;
-    flex-flow: row nowrap;
+    max-width: 800px
+    flex-flow: row nowrap
 
   div.container
-    width: 100%;
-    margin: 5rem auto 3rem;
+    width: 100%
+    margin: 5rem auto 3rem
 
     @media (min-width: 768px)
-      margin: 3rem auto 3rem;
-      display: grid;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
-      grid-template-rows: repeat(3, auto);
-      column-gap: 3rem;
-      row-gap: 1rem;
+      margin: 3rem auto 3rem
+      display: grid
+      grid-template-columns: 1fr 2fr 2fr 1fr
+      grid-template-rows: repeat(3, auto)
+      column-gap: 3rem
+      row-gap: 1rem
 
     h1
-      font-family: $headline-font;
-      font-size: 21vw;
-      line-height: 21vw;
-      margin: 0 auto 2rem;
-      text-align: center;
-      color: $lightneutral-color;
-      text-shadow: 2px 1px 0px #999, 2px 2px 0px #888, 2px 3px 0px #777, 2px 4px 0px #666, 2px 5px 0px #555, 02px 6px 0px #444, 2px 7px 0px #333, 2px 8px 7px #222;
-      grid-column: 1 / span 4;
-      transform: rotate(-6deg);
+      font-family: $headline-font
+      font-size: 21vw
+      line-height: 21vw
+      margin: 0 auto 2rem
+      text-align: center
+      color: $lightneutral-color
+      text-shadow: 2px 1px 0px #999, 2px 2px 0px #888, 2px 3px 0px #777, 2px 4px 0px #666, 2px 5px 0px #555, 02px 6px 0px #444, 2px 7px 0px #333, 2px 8px 7px #222
+      grid-column: 1 / span 4
+      transform: rotate(-6deg)
 
       @media (min-width: 768px)
-        font-size: 9rem;
-        line-height: 9rem;
+        font-size: 9rem
+        line-height: 9rem
 
     h2
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-family: $body-font;
-      font-size: 1.5rem;
-      line-height: 1.75rem;
-      grid-area: 2 / 2 / 3 / 3;
-      text-align: center;
-      padding: 0;
-      color: $lightprimary-color;
-      font-variant: normal;
-      font-style: normal;
-      text-transform: none;
-      transform: none;
-      border: none;
-      text-shadow: .125rem .125rem $darkprimary-color, 0 0 1px $black, 0 0 2px $black, 0 0 .25rem $darkbackground-color;
-      transform: rotate(-6deg);
+      width: 100%
+      max-width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      font-family: $body-font
+      font-size: 1.5rem
+      line-height: 1.75rem
+      grid-area: 2 / 2 / 3 / 3
+      text-align: center
+      padding: 0
+      color: $lightprimary-color
+      font-variant: normal
+      font-style: normal
+      text-transform: none
+      transform: none
+      border: none
+      text-shadow: .125rem .125rem $darkprimary-color, 0 0 1px $black, 0 0 2px $black, 0 0 .25rem $darkbackground-color
+      transform: rotate(-6deg)
 
       @media(min-width: 768px)
-        text-align: right;
+        text-align: right
 
       &::before
-        display: none;
+        display: none
 
     p
-      @include comic-card;
-      background-color: $lightsecondary-color;
-      padding: 1rem;
-      grid-area: 2 / 3 / 3 / 4;
-      text-align: center;
-      font-family: $body-font;
-      letter-spacing: -.5px;
-      box-shadow: 0 0 .25rem $darksecondary-color;
-      font-size: 1rem;
-      transform: rotate(-6deg);
+      @include comic-card
+      background-color: $lightsecondary-color
+      padding: 1rem
+      grid-area: 2 / 3 / 3 / 4
+      text-align: center
+      font-family: $body-font
+      letter-spacing: -.5px
+      box-shadow: 0 0 .25rem $darksecondary-color
+      font-size: 1rem
+      transform: rotate(-6deg)
 
       @media(min-width: 768px)
-        transform: translateY(-1.5rem) rotate(-6deg);
+        transform: translateY(-1.5rem) rotate(-6deg)
 
       a
-        color: $lightprimary-color;
-        font-family: $cursive-font;
-        font-size: 1.25rem;
-        font-weight: 700;
-        text-shadow: .125rem .125rem $darkprimary-color, 0 0 1px $black, 0 0 2px $black, 0 0 .25rem $darkbackground-color;
-        text-transform: uppercase;
-        transition: text-shadow 0.2s ease-in-out;
+        color: $lightprimary-color
+        font-family: $cursive-font
+        font-size: 1.25rem
+        font-weight: 700
+        text-shadow: .125rem .125rem $darkprimary-color, 0 0 1px $black, 0 0 2px $black, 0 0 .25rem $darkbackground-color
+        text-transform: uppercase
+        transition: text-shadow 0.2s ease-in-out
 
         &:hover
-          color: $lightneutral-color;
-          transition: color 0.2s ease-in-out;
+          color: $lightneutral-color
+          transition: color 0.2s ease-in-out
 
     h2, p
-      margin-bottom: 2rem;
+      margin-bottom: 2rem
 
     a.link-github
-      @include button;
-      grid-column: 1 / span 4;
-      margin: 0 auto;
-      display: block;
-      text-align: center;
-      width: 12rem;
-      transform: rotate(-6deg);
+      @include button
+      grid-column: 1 / span 4
+      margin: 0 auto
+      display: block
+      text-align: center
+      width: 12rem
+      transform: rotate(-6deg)
 
       &:hover
-        transform: scale(1.1) rotate(-6deg);
+        transform: scale(1.1) rotate(-6deg)
 
         @media(prefers-reduced-motion)
-          transform: rotate(-6deg);
+          transform: rotate(-6deg)
 
       svg
-        max-height: 1rem;
-        max-width: 1rem;
-        display: inline;
-        fill: $black;
+        max-height: 1rem
+        max-width: 1rem
+        display: inline
+        fill: $black
 

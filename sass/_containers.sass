@@ -1,14 +1,14 @@
-@import 'variables';
-@import 'mixins';
+@import 'variables'
+@import 'mixins'
 
 article:nth-child(n + 2),
 article#about section.container
-  @include comic-border;
-  position: relative;
-  background-color: $lightneutral-color;
-  margin: 0 auto 12.5vh;
-  padding: 0 2rem 2rem;
-  box-shadow: 0 0 .5rem $darkbackground-color;
+  @include comic-border
+  position: relative
+  background-color: $lightneutral-color
+  margin: 0 auto 12.5vh
+  padding: 0 2rem 2rem
+  box-shadow: 0 0 .5rem $darkbackground-color
 
   @media(min-width: 768px)
-    max-width: 800px;
+    max-width: 800px
